@@ -18,6 +18,7 @@ ActiveRecord::Base.configurations[:development] = {
   :database => Padrino.root('db', 'comedy_pf_development.db')
 
 }
+postgres = URI.parse(ENV['DATABASE_URL'] || '')
 ActiveRecord::Base.configurations[:production] = {
   :adapter  => 'postgresql',
   :encoding => 'utf8',
