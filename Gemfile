@@ -12,7 +12,12 @@ gem 'sinatra-flash', :require => 'sinatra/flash'
 gem 'sass'
 gem 'haml'
 gem 'activerecord', :require => "active_record"
-gem 'sqlite3'
+group :development do
+ gem 'sqlite3'
+end
+group :production do
+ gem 'pg'
+end
 
 # Test requirements
 gem 'shoulda', :group => "test"
